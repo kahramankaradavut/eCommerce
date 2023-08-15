@@ -57,7 +57,7 @@
                     </ul>
                 </li>
                 <li><a href="{{ route('about') }}">Hakkımızda</a></li>
-                <li><a href={{ route('products') }}>ÜRÜNLER </a></a></li>
+                <li><a href={{ route('products') }}>ÜRÜNLER</a></a></li>
                 <li><a href={{ route('contact') }}>İletişim</a></li>
             </ul>
         </div>
