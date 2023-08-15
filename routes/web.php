@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Frontend\PagesController;
+use App\Http\Controllers\Frontend\PageHomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PageHomeController::class, 'mainPage'])->name('mainPage');
+Route::get('/products', [PagesController::class, 'products'])->name('products');
+Route::get('/products/details', [PagesController::class, 'productsDetails'])->name('productsDetails');
+Route::get('/about', [PagesController::class, 'about'])->name('about');
+Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
+Route::get('/cart', [PagesController::class, 'cart'])->name('cart');
+
+
+
