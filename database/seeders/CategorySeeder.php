@@ -23,6 +23,24 @@ class CategorySeeder extends Seeder
             'status' => '1'
         ]);
 
+        Category::create([
+            'image' => null,
+            'thumbnail' => null,
+            'cat_ust' => $man->id,
+            'name' =>'Erkek Kazak',
+            'content' => 'Erkek Kazaklar',
+            'status' => '1'
+        ]);
+
+        Category::create([
+            'image' => null,
+            'thumbnail' => null,
+            'cat_ust' => $man->id,
+            'name' =>'Erkek Pantolon',
+            'content' => 'Erkek Pantolonlar',
+            'status' => '1'
+        ]);
+
         $woman = Category::create([
             'image' => null,
             'thumbnail' => null,
@@ -32,12 +50,48 @@ class CategorySeeder extends Seeder
             'status' => '1'
         ]);
 
+        Category::create([
+            'image' => null,
+            'thumbnail' => null,
+            'cat_ust' => $woman->id,
+            'name' =>'Kadın Çanta',
+            'content' => 'Kadın Çantalar',
+            'status' => '1'
+        ]);
+
+        Category::create([
+            'image' => null,
+            'thumbnail' => null,
+            'cat_ust' => $woman->id,
+            'name' =>'Kadın Pantolon',
+            'content' => 'Kadın Pantolonlar',
+            'status' => '1'
+        ]);
+
         $kids = Category::create([
             'image' => null,
             'thumbnail' => null,
             'cat_ust' => null,
             'name' =>'Çocuk',
             'content' => 'Çocuk Giyim',
+            'status' => '1'
+        ]);
+
+        Category::create([
+            'image' => null,
+            'thumbnail' => null,
+            'cat_ust' => $kids->id,
+            'name' =>'Çocuk Oyuncaklar',
+            'content' => 'Çocuk Oyuncaklar',
+            'status' => '1'
+        ]);
+
+        Category::create([
+            'image' => null,
+            'thumbnail' => null,
+            'cat_ust' => $kids->id,
+            'name' =>'Çocuk Pantolon',
+            'content' => 'Çocuk Pantolonlar',
             'status' => '1'
         ]);
     }

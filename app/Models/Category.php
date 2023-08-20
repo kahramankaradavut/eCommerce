@@ -10,7 +10,7 @@ use Cviebrock\EloquentSluggable\Sluggable;
 class Category extends Model
 {
     use Sluggable;
-    protected $fillable = ['image', 'thumbnail', 'name', 'slug', 'content', 'cat_usr', 'status'];
+    protected $fillable = ['image', 'thumbnail', 'name', 'slug', 'content', 'cat_ust', 'status'];
     public function sluggable(): array
     {
         return [
