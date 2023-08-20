@@ -5,7 +5,7 @@
       <div class="container">
         <div class="row align-items-start align-items-md-center justify-content-end">
           <div class="col-md-5 text-center text-md-left pt-5 pt-md-0">
-            <h1 class="mb-2">Finding Your Perfect Shoes</h1>
+            <h1 class="mb-2">{{$slider->name}}</h1>
             <div class="intro-text text-center text-md-left">
               <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla. </p>
               <p>
@@ -180,7 +180,6 @@
           </div>
           <div class="col-md-12 col-lg-5 text-center pl-md-5">
             <h2><a style="color: #7971ea">Tüm ürünlerde %50'ye varan indirimler!</a></h2>
-            <p class="post-meta mb-4">By <a href="#">Carl Smith</a> <span class="block-8-sep">&bullet;</span> September 3, 2018</p>
             <p>Seçili Ürünlerde İndirim Fırsatlarını Kaçırmayın! </p>
             <p><a href="{{route('indirimdekiler')}}" class="btn btn-primary btn-sm">İndirimdeki Ürünler</a></p>
           </div>

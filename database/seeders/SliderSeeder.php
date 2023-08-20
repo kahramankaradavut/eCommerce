@@ -17,7 +17,8 @@ class SliderSeeder extends Seeder
             'image' => 'https://fakeimg.pl/250x100/',
             'name' =>'Slider1',
             'content' =>'Hoşgeldiniz',
-            'link' =>'products'
+            'link' =>'products',
+            'status' => '1'
         ]);
     }
 }

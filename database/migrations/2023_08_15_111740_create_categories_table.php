@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug');
             $table->text('content')->nullable();
-            $table->integer('cat_usr')->nullable();
+            $table->integer('cat_ust')->nullable();
             $table->enum('status', ['0', '1'])->default('1');
             $table->timestamps();
         });

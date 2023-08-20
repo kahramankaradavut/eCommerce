@@ -10,7 +10,7 @@ class PageHomeController extends Controller
 {
     public function mainPage()
     {
-        $slider = Slider::where('status', '0')->first();
+        $slider = Slider::where('status', '1')->first();
         return view('frontend.pages.index', compact('slider'));
     }
 }
