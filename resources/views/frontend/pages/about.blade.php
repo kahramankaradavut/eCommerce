@@ -34,7 +34,7 @@
       </div>
     </div>
 
-    <div class="site-section border-bottom" data-aos="fade">
+    {{-- <div class="site-section border-bottom" data-aos="fade">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 site-section-heading text-center pt-4">
@@ -101,7 +101,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
   
 
     <div class="site-section site-section-sm site-blocks-1 border-0" data-aos="fade">
@@ -112,8 +112,8 @@
               <span class="icon-truck"></span>
             </div>
             <div class="text">
-              <h2 class="text-uppercase">Free Shipping</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.</p>
+              <h2 class="text-uppercase">{{$about->text_1}}</h2>
+              <p>{{$about->text_1_content}}</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="100">
@@ -121,8 +121,8 @@
               <span class="icon-refresh2"></span>
             </div>
             <div class="text">
-              <h2 class="text-uppercase">Free Returns</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.</p>
+              <h2 class="text-uppercase">{{$about->text_2}}</h2>
+              <p>{{$about->text_2_content}}</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="200">
@@ -130,8 +130,8 @@
               <span class="icon-help"></span>
             </div>
             <div class="text">
-              <h2 class="text-uppercase">Customer Support</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.</p>
+              <h2 class="text-uppercase">{{$about->text_3}}</h2>
+              <p>{{$about->text_3_content}}</p>
             </div>
           </div>
         </div>

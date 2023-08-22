@@ -20,9 +20,9 @@
                 <div class="block-5 mb-5">
                     <h3 class="footer-heading mb-4">İletişim</h3>
                     <ul class="list-unstyled">
-                        <li class="address">Adres Bilgilerim Burada</li>
-                        <li class="phone"><a href="tel://05555555555">05555555555</a></li>
-                        <li class="email">emailaddress@domain.com</li>
+                        <li class="address">{{$settings['adres']}}</li>
+                        <li class="phone"><a href="tel://05555555555">{{$settings['phone']}}</a></li>
+                        <li class="email">{{$settings['email']}}</li>
                     </ul>
                 </div>
 

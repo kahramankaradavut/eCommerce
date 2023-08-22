@@ -22,29 +22,29 @@
         <div class="row">
           <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="">
             <div class="icon mr-4 align-self-start">
-              <span class="icon-truck"></span>
+              <span class="{{$about->text_1_icon}}"></span>
             </div>
             <div class="text">
-              <h2 class="text-uppercase">Hızlı Kargo</h2>
-              <p>Beğendiğiniz ürünleri Türkiye'nin her yerine ulaştırıyoruz.</p>
+              <h2 class="text-uppercase">{{$about->text_1}}</h2>
+              <p>{{$about->text_1_content}}</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="100">
             <div class="icon mr-4 align-self-start">
-              <span class="icon-refresh2"></span>
+              <span class="{{$about->text_2_icon}}"></span>
             </div>
             <div class="text">
-              <h2 class="text-uppercase">Kolay Gerİ İade</h2>
-              <p>30 gün içinde dilediğinzi zaman iade imkanı sağlanır.</p>
+              <h2 class="text-uppercase">{{$about->text_2}}</h2>
+              <p>{{$about->text_2_content}}</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="200">
             <div class="icon mr-4 align-self-start">
-              <span class="icon-help"></span>
+              <span class="{{$about->text_3_icon}}"></span>
             </div>
             <div class="text">
-              <h2 class="text-uppercase">Destek</h2>
-              <p>7/24 bize ulaşabilirsiniz.</p>
+              <h2 class="text-uppercase">{{$about->text_3}}</h2>
+              <p>{{$about->text_3_content}}</p>
             </div>
           </div>
         </div>
