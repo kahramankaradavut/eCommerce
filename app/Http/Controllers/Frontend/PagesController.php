@@ -36,12 +36,13 @@ class PagesController extends Controller
       })
       ->paginate(1);
 
-      $categories = Category::where('status', '1')->where('cat_ust', null)->get();
+      $Maincategories = Category::where('cat_ust', null)->get();
+
 
       $slider = Slider::where('status', '1')->first();
       $categories = Category::where('status', '1')->get();
       $about = About::where('id', 1)->first();
-      return view('frontend.pages.products', compact('slider', 'about', 'categories', 'products', 'categories'));
+      return view('frontend.pages.products', compact('slider', 'about', 'categories', 'products', 'Maincategories'));
     }
 
     public function sale()
