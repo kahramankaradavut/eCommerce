@@ -3,7 +3,7 @@
     <div class="bg-light py-3">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Contact</strong></div>
+          <div class="col-md-12 mb-0"><a href="{{ route('mainPage') }}">Ana Sayfa</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">İletişim</strong></div>
         </div>
       </div>
     </div>  
@@ -12,9 +12,15 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h2 class="h3 mb-3 text-black">Get In Touch</h2>
+            <h2 class="h3 mb-3 text-black">Bizimle İletişime Geçin</h2>
           </div>
           <div class="col-md-7">
+
+            @if (session()->has('message'))
+                <div class="alert alert-success">
+                  {{ session()->get('message') }}
+                </div>
+            @endif
 
             <form action="{{route('contact.save')}}" method="post">
               @csrf
@@ -22,13 +28,13 @@
                 <div class="form-group row">
                   <div class="col-md-12">
                     <label for="c_fname" class="text-black">Ad Soyad <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="c_fname" name="name">
+                    <input type="text" class="form-control" id="c_fname" required name="name">
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-md-12">
                     <label for="c_email" class="text-black">E-posta <span class="text-danger">*</span></label>
-                    <input type="email" class="form-control" id="c_email" name="email" placeholder="">
+                    <input type="email" class="form-control" id="c_email" required name="email" placeholder="">
                   </div>
                 </div>
                 <div class="form-group row">
@@ -41,12 +47,12 @@
                 <div class="form-group row">
                   <div class="col-md-12">
                     <label for="c_message" class="text-black">Mesaj </label>
-                    <textarea name="c_message" id="c_message" cols="30" rows="7" class="form-control"></textarea>
+                    <textarea name="message" id="c_message" cols="30" rows="7" class="form-control"></textarea>
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-lg-12">
-                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Gönder">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Gönder</button>
                   </div>
                 </div>
               </div>
@@ -54,17 +60,10 @@
           </div>
           <div class="col-md-5 ml-auto">
             <div class="p-4 border mb-3">
-              <span class="d-block text-primary h6 text-uppercase">New York</span>
-              <p class="mb-0">203 Fake St. Mountain View, San Francisco, California, USA</p>
+              <span class="d-block text-primary h6 text-uppercase">Adres</span>
+              <p class="mb-0">{{$settings['adres']}}</p>
             </div>
-            <div class="p-4 border mb-3">
-              <span class="d-block text-primary h6 text-uppercase">London</span>
-              <p class="mb-0">203 Fake St. Mountain View, San Francisco, California, USA</p>
-            </div>
-            <div class="p-4 border mb-3">
-              <span class="d-block text-primary h6 text-uppercase">Canada</span>
-              <p class="mb-0">203 Fake St. Mountain View, San Francisco, California, USA</p>
-            </div>
+      
 
           </div>
         </div>

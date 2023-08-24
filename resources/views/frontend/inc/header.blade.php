@@ -39,7 +39,7 @@
     <nav class="site-navigation text-right text-md-center" role="navigation">
         <div class="container">
             <ul class="site-menu js-clone-nav d-none d-md-block">
-                <li><a href="{{ route('mainPage') }}">Anasayfa</a></li>
+                <li><a href="{{ route('mainPage') }}">Ana Sayfa</a></li>
                 <li class="has-children">
                     <a>Kategori</a>
                     <ul class="dropdown">
