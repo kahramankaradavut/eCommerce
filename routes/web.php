@@ -19,9 +19,9 @@ use App\Http\Controllers\Frontend\PageHomeController;
 Route::group(['middleware' => 'sitesetting'], function() {
     Route::get('/', [PageHomeController::class, 'mainPage'])->name('mainPage');
     Route::get('/ürünler', [PagesController::class, 'products'])->name('products');
-    Route::get('/erkek-giyim', [PagesController::class, 'products'])->name('erkekurunler');
-    Route::get('/kadin-giyim', [PagesController::class, 'products'])->name('kadinurunler');
-    Route::get('/cocuk-giyim', [PagesController::class, 'products'])->name('cocukurunler');
+    Route::get('/erkek/{$slug?}', [PagesController::class, 'products'])->name('erkekproducts');
+    Route::get('/kadin/{$slug?}', [PagesController::class, 'products'])->name('kadinproducts');
+    Route::get('/cocuk/{$slug?}', [PagesController::class, 'products'])->name('cocukproducts');
     Route::get('/indirimdekiler', [PagesController::class, 'sale'])->name('indirimdekiler');
     Route::get('/ürün-detay/{slug}', [PagesController::class, 'productsDetails'])->name('productsDetails');
     Route::get('/hakkında', [PagesController::class, 'about'])->name('about');

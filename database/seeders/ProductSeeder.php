@@ -16,7 +16,7 @@ class ProductSeeder extends Seeder
         Product::create([
             'name' => 'Urun 1',
             'image' => 'images/cloth_1.jpg',
-            'cetegory_id' => 1,
+            'category_id' => 1,
             'short_text' => 'Kısabilgi',
             'price' => 100,
             'size' => 'small',
@@ -29,7 +29,7 @@ class ProductSeeder extends Seeder
         Product::create([
             'name' => 'Urun 2',
             'image' => 'images/cloth_2.jpg',
-            'cetegory_id' => 2,
+            'category_id' => 2,
             'short_text' => 'Kısabilgi 2',
             'price' => 150,
             'size' => 'Large',

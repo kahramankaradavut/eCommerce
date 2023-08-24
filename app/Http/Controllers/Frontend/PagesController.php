@@ -20,6 +20,10 @@ class PagesController extends Controller
       $startPrice = $request->start_price ?? null;
 
       $endPrice = $request->end_price ?? null;
+      
+      $order = $request->order ?? 'id';
+
+      $short = $request->short ?? 'desc';
 
       $products = Product::where('status', '1')
       ->where( function($q) use($size, $color, $startPrice, $endPrice){
@@ -28,21 +32,29 @@ class PagesController extends Controller
          }
          if(!empty($size)){
             $q->where('size', $size);
-         }
-         if(!empty($color)){
+         } 
+         if(!empty($color)){       
             $q->where('color', $color);
          }
          return $q;
       })
-      ->paginate(1);
+      ->with('category');
 
-      $Maincategories = Category::where('cat_ust', null)->get();
+      $minPrice = $products->min('price');
+      $maxPrice = $products->max('price');
+
+      $sizeLists = Product::where('status', '1')->groupBy('size')->pluck('size')->toArray();
+      $colors = Product::where('status', '1')->groupBy('color')->pluck('color')->toArray();
+
+      $products = $products->orderBy($order, $short)->paginate(1);
+
+      $Maincategories = Category::where('status', '1')->where('cat_ust', null)->withCount('items')->get();
 
 
       $slider = Slider::where('status', '1')->first();
       $categories = Category::where('status', '1')->get();
       $about = About::where('id', 1)->first();
-      return view('frontend.pages.products', compact('slider', 'about', 'categories', 'products', 'Maincategories'));
+      return view('frontend.pages.products', compact('slider', 'about', 'categories', 'products', 'Maincategories', 'minPrice', 'maxPrice', 'sizeLists', 'colors'));
     }
 
     public function sale()

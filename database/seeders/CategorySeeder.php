@@ -15,7 +15,7 @@ class CategorySeeder extends Seeder
     {
 
         $man = Category::create([
-            'image' => null,
+            'image' => 'img/men.jpg',
             'thumbnail' => null,
             'cat_ust' => null,
             'name' =>'Erkek',
@@ -42,7 +42,7 @@ class CategorySeeder extends Seeder
         ]);
 
         $woman = Category::create([
-            'image' => null,
+            'image' => 'img/women.jpg',
             'thumbnail' => null,
             'cat_ust' => null,
             'name' =>'Kadın',
@@ -69,7 +69,7 @@ class CategorySeeder extends Seeder
         ]);
 
         $kids = Category::create([
-            'image' => null,
+            'image' => 'img/children.jpg',
             'thumbnail' => null,
             'cat_ust' => null,
             'name' =>'Çocuk',
