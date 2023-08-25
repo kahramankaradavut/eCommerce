@@ -76,8 +76,9 @@
                     <div class="border p-4 rounded mb-4">
                         <h3 class="mb-3 h6 text-uppercase text-black d-block">Kategorİ</h3>
                         <ul class="list-unstyled mb-0">
-                            @if (!empty($Maincategories) && $Maincategories->count() > 0)
-                                @foreach ($Maincategories as $category)
+                         @dd($categories)
+                            @if (!empty($categories) && $categories->count() > 0)
+                                @foreach ($categories as $category)
                                     <li class="mb-1"><a href="#" class="d-flex"><span>{{$category->name}}</span> <span
                                                 class="text-black ml-auto">{{ $category->items_count }}</span></a></li>
                                 @endforeach

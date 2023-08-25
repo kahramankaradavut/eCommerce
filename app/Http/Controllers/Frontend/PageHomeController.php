@@ -12,11 +12,9 @@ class PageHomeController extends Controller
 {
     public function mainPage()
     {
-        $Maincategories = Category::where('status', '1')->where('cat_ust', null)->withCount('items')->get();
-
         $slider = Slider::where('status', '1')->first();
-        $categories = Category::where('status', '1')->get();
+
         $about = About::where('id', 1)->first();
-        return view('frontend.pages.index', compact('slider', 'about', 'categories', 'Maincategories'));
+        return view('frontend.pages.index', compact('slider', 'about'));
     }
 }

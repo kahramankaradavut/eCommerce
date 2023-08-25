@@ -48,58 +48,46 @@ class PagesController extends Controller
 
       $products = $products->orderBy($order, $short)->paginate(1);
 
-      $Maincategories = Category::where('status', '1')->where('cat_ust', null)->withCount('items')->get();
 
 
       $slider = Slider::where('status', '1')->first();
       $categories = Category::where('status', '1')->get();
       $about = About::where('id', 1)->first();
-      return view('frontend.pages.products', compact('slider', 'about', 'categories', 'products', 'Maincategories', 'minPrice', 'maxPrice', 'sizeLists', 'colors'));
+      return view('frontend.pages.products', compact('slider', 'about', 'products', 'minPrice', 'maxPrice', 'sizeLists', 'colors'));
     }
 
     public function sale()
     {
-      $slider = Slider::where('status', '1')->first();
-      $categories = Category::where('status', '1')->get();
-      $about = About::where('id', 1)->first();
-      return view('frontend.pages.products', compact('slider', 'about', 'categories'));
+      
+      return view('frontend.pages.products');
 
     }
 
     public function productsDetails($slug)
     {
       $product = Product::whereSlug($slug)->first();
-      $slider = Slider::where('status', '1')->first();
-        $categories = Category::where('status', '1')->get();
-        $about = About::where('id', 1)->first();
-        return view('frontend.pages.productsDetails', compact('slider', 'about', 'categories', 'product'));
+        return view('frontend.pages.productsDetails', compact('product'));
 
     }
 
     public function about()
     {
-      $slider = Slider::where('status', '1')->first();
-        $categories = Category::where('status', '1')->get();
         $about = About::where('id', 1)->first();
-        return view('frontend.pages.about', compact('slider', 'about', 'categories'));
+        return view('frontend.pages.about', compact('about'));
 
     }
 
     public function contact()
     {
-      $slider = Slider::where('status', '1')->first();
-        $categories = Category::where('status', '1')->get();
-        $about = About::where('id', 1)->first();
-        return view('frontend.pages.contact', compact('slider', 'about', 'categories'));
+      
+        return view('frontend.pages.contact');
 
     }
 
     public function cart()
     {
-      $slider = Slider::where('status', '1')->first();
-        $categories = Category::where('status', '1')->get();
-        $about = About::where('id', 1)->first();
-        return view('frontend.pages.cart', compact('slider', 'about', 'categories'));
+      
+        return view('frontend.pages.cart');
 
     }
 }

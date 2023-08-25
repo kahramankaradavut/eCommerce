@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use App\Models\Category;
 use App\Models\SiteSettings;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -17,7 +18,11 @@ class SiteSettingMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         $settings = SiteSettings::pluck('data', 'name')->toArray();
-        view()->share(['settings' => $settings]);
+
+      $categories = Category::where('status', '1')->withCount('items')->get();
+
+        
+        view()->share(['settings' => $settings, 'categories' => $categories]);
 
         return $next($request);
     }
